@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>cREAR PERSONAS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> 
+        
+            <H2>  Agregar persona</H2>
+            <form action="#" th:action="@{/guardar}" th:object="${mostrar}" method="post">
+                
+                <div>
+                    <label for="michael">Nombre</label>
+                    <input type="text" id="michael" th:field="*{michael}" name="michael">
+                    
+                </div>
+                
+                 <input type="hidden" th:field="*{id}" name="id" id="id">
+                <div>
+                    
+                    <label for="david">S Nombre</label>
+                    <input type="text" id="david" th:field="*{david}" name="david">
+                    
+                </div>
+                <div>
+                    <label for="carcamo">P Apellido</label>
+                    <input type="text" id="carcamo" th:field="*{carcamo}" name="carcamo">
+                    
+                </div>
+                <div>
+                    <label for="figueroa">S Apellido</label>
+                    <input type="text" id="figueroa" th:field="*{figueroa}" name="figueroa">
+                    
+                </div>
+                 <button type="submit" >Guardar</button>
+                
+                
+            </form>
+        
+        
+        </div>
+        
+     
+        
+        
+    </body>
+</html>

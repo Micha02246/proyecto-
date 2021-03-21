@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html  xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Lista de Alumnos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+    </body>
+
+ 
+<div>
+            <br>
+            <div>
+                <a href="/crear">Agregar Persona</a>
+            </div>
+            <h2 th:if="${lista.isEmpty()}">No hay Personas</h2>
+            <div th:if="${!lista.isEmpty()}" >
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>Primer Apellido</th>
+                            <th>Segundo Apellido</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="mostrar : ${lista}">
+                            <td th:text="${mostrar.michael}">
+                            <td th:text="${mostrar.david}">
+                            <td th:text="${mostrar.carcamo}">
+                            <td th:text="${mostrar.figueroa}">
+                            <td><a th:href="@{/actualizar/{id}(id=${mostrar.id})}">Editar</a></td>
+                            <td><a th:href="@{/eliminar/{id}(id=${mostrar.id})}">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </body>
+</html>

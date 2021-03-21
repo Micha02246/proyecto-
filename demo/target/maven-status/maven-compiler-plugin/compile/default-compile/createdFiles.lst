@@ -1,0 +1,6 @@
+com\example\demo\controladores\PersonaUIControlador.class
+com\example\demo\DemoApplication.class
+com\example\demo\modelos\Persona.class
+com\example\demo\repositorios\personaRepositorio.class
+com\example\demo\servicios\PersonaServicios.class
+com\example\demo\controladores\PersonaApiControlador.class
